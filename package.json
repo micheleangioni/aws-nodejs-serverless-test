@@ -14,7 +14,7 @@
     "name": "Michele Angioni",
     "email": "michele.angioni@gmail.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "serverless": "^1.63.0",
     "serverless-localstack": "^0.4.24"
