@@ -6,7 +6,7 @@ This minimalistic repo has the only purpose to demonstrate a bug in Localstack
 
 ### Steps to reproduce
 
-1. Run Localstack via docker compose by running `docker-compose up`
+1. Run Localstack via docker compose by running `docker-compose up` (`TMPDIR=/private$TMPDIR docker-compose up` in MacOs)
 2. Deploy the application locally via `npm run deploy-local`
 3. Observe the following error:
 
