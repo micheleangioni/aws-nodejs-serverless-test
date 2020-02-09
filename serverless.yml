@@ -1,0 +1,40 @@
+service: aws-nodejs
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, self:custom.defaultStage}
+  environment:
+    SLS_DEBUG: true
+
+plugins:
+  - serverless-localstack
+
+custom:
+  defaultStage: local
+  localstack:
+    debug: true
+    stages:
+      - local
+    autostart: false
+    host: http://localhost
+    endpointFile: localstack_endpoints.json
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          method: get
+          path: hello
+      - sns:
+          arn: !Ref TestTopic
+          topicName: test_topic
+
+resources:
+  Resources:
+    TestTopic:
+      Type: AWS::SNS::Topic
+      Properties:
+        DisplayName: Test topic
+        TopicName: test_topic

@@ -1,0 +1,22 @@
+{
+  "name": "aws-nodejs",
+  "version": "0.1.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "package": "node --max-old-space-size=4096 node_modules/serverless/bin/serverless package --stage development",
+    "offline": "node --max-old-space-size=4096 node_modules/serverless/bin/serverless offline start --port 3000 --stage development",
+    "deploy-local": "node --max-old-space-size=4096 node_modules/serverless/bin/serverless deploy --stage local --region us-east-1",
+    "remove-local": "node --max-old-space-size=4096 node_modules/serverless/bin/serverless remove --stage local --region us-east-1",
+    "invoke-local": "node --max-old-space-size=4096 node_modules/serverless/bin/serverless invoke -f hello --stage local"
+  },
+  "author": {
+    "name": "Michele Angioni",
+    "email": "michele.angioni@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "serverless": "^1.63.0",
+    "serverless-localstack": "^0.4.24"
+  }
+}
