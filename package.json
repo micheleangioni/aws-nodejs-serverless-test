@@ -18,6 +18,7 @@
   "devDependencies": {
     "@types/node": "^12.12.25",
     "serverless": "^1.63.0",
+    "serverless-deployment-bucket": "^1.1.0",
     "serverless-localstack": "^0.4.24",
     "serverless-offline": "^5.12.1",
     "serverless-plugin-typescript": "^1.1.9",

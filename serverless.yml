@@ -7,8 +7,12 @@ provider:
   region: ${opt:region, 'eu-west-1'} # must be set us-east-1 to work with Localstack
   environment:
     SLS_DEBUG: 'true'
+  deploymentBucket:
+    name: aws-nodejs-bucket
+    serverSideEncryption: AES256
 
 plugins:
+  - serverless-deployment-bucket
   - serverless-plugin-typescript
   - serverless-localstack
   - serverless-offline
@@ -22,6 +26,8 @@ custom:
     autostart: false
     host: http://localhost
     endpointFile: localstack_endpoints.json
+  deploymentBucket:
+    versioning: false
 
 functions:
   hello:
