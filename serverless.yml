@@ -9,6 +9,7 @@ provider:
     SLS_DEBUG: 'true'
 
 plugins:
+  - serverless-plugin-typescript
   - serverless-localstack
   - serverless-offline
 

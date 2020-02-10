@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es2018"],
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "esModuleInterop": false,
+    "target": "es2020",
+    "outDir": ".build",
+    "rootDir": "./"
+  },
+  "exclude": ["node_modules"]
+}

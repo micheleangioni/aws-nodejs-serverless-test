@@ -2,7 +2,7 @@
   "name": "aws-nodejs",
   "version": "0.1.0",
   "description": "",
-  "main": "handler.js",
+  "main": "handler.ts",
   "scripts": {
     "package": "node --max-old-space-size=4096 node_modules/serverless/bin/serverless package --stage development",
     "offline": "node --max-old-space-size=4096 node_modules/serverless/bin/serverless offline start --port 3000 --stage development",
@@ -16,8 +16,12 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^12.12.25",
     "serverless": "^1.63.0",
     "serverless-localstack": "^0.4.24",
-    "serverless-offline": "^5.12.1"
+    "serverless-offline": "^5.12.1",
+    "serverless-plugin-typescript": "^1.1.9",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
   }
 }
