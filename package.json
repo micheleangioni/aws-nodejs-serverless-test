@@ -17,6 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "serverless": "^1.63.0",
-    "serverless-localstack": "^0.4.24"
+    "serverless-localstack": "^0.4.24",
+    "serverless-offline": "^5.12.1"
   }
 }

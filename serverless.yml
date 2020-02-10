@@ -4,11 +4,13 @@ provider:
   name: aws
   runtime: nodejs12.x
   stage: ${opt:stage, self:custom.defaultStage}
+  region: ${opt:region, 'eu-west-1'} # must be set us-east-1 to work with Localstack
   environment:
     SLS_DEBUG: 'true'
 
 plugins:
   - serverless-localstack
+  - serverless-offline
 
 custom:
   defaultStage: local
