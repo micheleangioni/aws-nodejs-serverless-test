@@ -5,7 +5,7 @@ provider:
   runtime: nodejs12.x
   stage: ${opt:stage, self:custom.defaultStage}
   environment:
-    SLS_DEBUG: true
+    SLS_DEBUG: 'true'
 
 plugins:
   - serverless-localstack
